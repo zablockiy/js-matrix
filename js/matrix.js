@@ -6,9 +6,9 @@ let ch = window.innerHeight
 
 let charArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'A', 'B', 'C', 'D', 'E', 'F', 'G']
 
-let maxCharCount = 300;
+let maxCharCount = 150;
 let fallingCharArr = [];
-let fontSize = 13;
+let fontSize = 15;
 let maxColumns = cw / fontSize;
 
 canvas.width = cw;
@@ -25,7 +25,7 @@ class FallingChar {
 
     draw(ctx) {
         this.value = charArr[Math.floor(Math.random() * (charArr.length - 1))].toUpperCase()
-        this.speed = Math.random() * fontSize * 3 / 4 + fontSize * 3 / 4
+        this.speed = Math.random() * fontSize * 3/4 + fontSize * 3/4
         
         ctx.fillStyle = "rgba(0,255,0)";
         ctx.font = fontSize + "px san-serif";
